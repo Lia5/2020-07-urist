@@ -1,3 +1,3 @@
-# 2020-06-topfoto
+# 2020-07-urist
 
-<a href="https://lia5.github.io/2020-06-topfoto/myapp/index.html">main</a>
+<a href="https://lia5.github.io/2020-07-urist/myapp/index.html">main</a>
