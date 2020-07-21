@@ -118,10 +118,21 @@
     }
     &__pic {
         margin-right: -24px;
+        @media screen and (max-width: 749px){
+            width: 51%;
+        }
+        img {
+            @media screen and (max-width: 749px){
+                max-width: 100%;
+            }
+        }
     }
     &__line {
         font-size: 24px;
         color: #000;
+        @media screen and (max-width: 749px){
+            font-size: 16px;
+        }
         span {
             display: inline-block;
             background: url('../img/line-bg.png') no-repeat;
