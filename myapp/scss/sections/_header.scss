@@ -19,11 +19,6 @@ nav {
         justify-content: center;
         text-align: center;
     }
-    a:not(.btn) {
-        @media screen and (min-width: 750px){
-            color: #fff;
-        }
-    }
 }
 header {
     display: flex;
@@ -38,13 +33,15 @@ header {
     @media screen and (max-height: 850px) and  (min-width: 1081px) {
     }
     .header__callback {
+        font-size: 16px;
         color: #45a5ff;
         text-decoration: underline;
         line-height: 1;
         text-align: right;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-
+            margin-left: -2px;
+            margin-top: 4px;
         }
         @media screen and (max-width: 749px){
             font-size: 16px;
@@ -72,6 +69,11 @@ header {
     }
     &__group {
         // max-width: 255px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            margin-top: 7px;
+            margin-right: -3px;
+        }
         @media screen and (max-width: 749px){
 
         }
@@ -93,9 +95,12 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    color: #fff;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
         display: block;
+        margin-top: 21px;
+        line-height: 1.6;
     }
     @media screen and (max-width: 749px){
 
@@ -129,7 +134,8 @@ header {
     max-width: 287px;
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
-
+        margin-bottom: 8px;
+        padding: 0 9px;
     }
     @media only screen and (max-width:  749px){
         max-width: none;
@@ -153,6 +159,11 @@ header {
         }
         span:nth-of-type(2) {
             letter-spacing: -0.52px;
+        }
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            line-height: 25px;
+            margin-top: 10px;
         }
         @media only screen and (max-width:  749px){
             text-align: left;

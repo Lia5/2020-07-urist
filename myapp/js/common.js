@@ -41,16 +41,6 @@ $(function() {
             return false;
         });
     }
-    if(jQuery('.advantages__control').length) {
-        $('.advantages__control a').click(function(e){
-            var $link = $(this).attr("href");
-            $('.advantages__wrap').animate({
-                scrollLeft: $('.advantages__wrap').scrollLeft() + $($link).offset().left
-            }, 1000);
-            $(this).prev().addClass('active').siblings().removeClass('active');
-            e.preventDefault();
-        });
-    }
 
     //select-number form
     if(jQuery('.phone-mask').length) {
@@ -59,48 +49,15 @@ $(function() {
         });
     }
 
-    // if( window.innerWidth < 1081 || window.screen.width < 1081){
-    //     $('.advantages').slick({
-    //         infinite: true,
-    //         slidesToShow: 3,
-    //         slidesToScroll: 2,
-    //         variableWidth: true,
-    //         arrows: false,
-    //         dots: false,
-    //         responsive: [
-    //             {
-    //               breakpoint: 1082,
-    //               settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 2,
-    //                 arrows: false,
-    //                 centerPadding: '40px',
-    //                 slidesToShow: 1
-    //               }
-    //             },
-    //             {
-    //               breakpoint: 480,
-    //               settings: {
-    //                 arrows: false,
-    //                 slidesToShow: 1
-    //               }
-    //             }
-    //           ]
-    //       });
-    // }
-    if (jQuery('.tooltip').length) {
-        if (window.innerWidth < 1350 || window.screen.width < 1350) {
-            $('.tooltip__title').on('click', function () {
-                $(this).parent().toggleClass('active');
-                var tooltipQa = $(this);
-                $('body').mouseup(function (e) { // событие клика по веб-документу
-                    var div = $(".tooltip"); // тут указываем ID элемента
-                    // var close = $('.modal-close');
-                    if (!div.is(e.target) // если клик был не по нашему блоку
-                        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-                        tooltipQa.parent().removeClass('active');
-                    }
-                });
+    if( window.innerWidth < 750 || window.screen.width < 750){
+        if(jQuery('.why__items').length) { 
+            $('.why__item0').remove();
+            $('.why__items').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
             });
         }
     }

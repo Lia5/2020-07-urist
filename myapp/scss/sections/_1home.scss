@@ -11,10 +11,10 @@
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
         padding-bottom: 27px;
-        padding-top: 43px;
+        padding-top: 60px;
     }
     @media screen and (max-width: 749px){
-        padding-top: 53px;
+        padding-top: 30px;
         padding-bottom: 48px;
     }
     .wrap {
@@ -37,10 +37,11 @@
         screen and (max-width: 1080px) {
             width: 100%;
             position: relative;
-            padding-bottom: 55px;
+            padding-bottom: 89px;
         }
         @media screen and (max-width: 749px){
             padding-right: 0;
+            padding-bottom: 0;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
@@ -52,10 +53,10 @@
                 position: absolute;
                 bottom: 0;
                 right: -15px;
-                width: 422px;
-                height: 549px;
+                width: 415px;
+                height: 501px;
                 background: url('../img/man.png') no-repeat;
-                background-size: 750px;
+                background-size: 560px;
                 background-position: left top;
                 z-index: -1;
             }
@@ -68,17 +69,20 @@
         font-size: 45px;
         line-height: 54px;
         letter-spacing: 2px;
-        margin-bottom: 12px;
+        margin-bottom: 9px;
         color: $accent;
         text-transform: uppercase;
         // max-width: 600px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
+            margin-bottom: 4px;
             font-size: 38px;
             line-height: 1.2;
         }
         @media screen and (max-width: 749px){
+            margin-bottom: -3px;
             font-size: 27px;
+            letter-spacing: 1.2px;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
@@ -86,16 +90,17 @@
     }
     &__subtitle {
         font-size: 45px;
-        line-height: 57px;
+        line-height: 60px;
         letter-spacing: 1px;
         text-transform: uppercase;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             font-size: 38px;
-            line-height: 1.2;
+            line-height: 1.42;
         }
         @media screen and (max-width: 749px){
             font-size: 27px;
+            margin-right: -8px;
         }
 
 
@@ -104,7 +109,12 @@
                 width: 32px;
                 height: 32px;
                 fill: #fff;
-                margin: 0 15px 0 10px;
+                margin: 0 13px 0 6px;
+                @media screen and (max-width: 749px){
+                    width: 19px;
+                    height: 22px;
+                    margin: 12px 5px 0 4px;
+                }
             }
             &--accent svg {
                 fill: $accent;
@@ -114,15 +124,29 @@
     &__item {
         display: flex;
         align-items: center;
-        margin: -17px 0 -32px -43px;
+        margin: -22px 0 -32px -43px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            margin: -17px 0 8px -15px;
+        }
+        @media screen and (max-width: 749px){
+            margin: -19px 0 0 -31px;
+        }
     }
     &__pic {
         margin-right: -24px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            max-width: 195px;
+            margin-right: -37px;
+        }
         @media screen and (max-width: 749px){
-            width: 51%;
+            width: 47%;
+            margin-right: -15px;
         }
         img {
-            @media screen and (max-width: 749px){
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
                 max-width: 100%;
             }
         }
@@ -138,12 +162,32 @@
             background: url('../img/line-bg.png') no-repeat;
             background-size: 100% 100%;
             padding: 7px 10px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.35px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                padding: 7px;
+            }
+            @media screen and (max-width: 749px){
+                letter-spacing: 0;
+                line-height: 1;
+                padding: 5px 7px;
+            }
         }
+    }
+    &__text {
+        @media screen and (max-width: 749px){
+            margin-top: 0;
+        }
+        
     }
     &__person {
         position: relative;
         text-align: right;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            padding-top: 34px;
+            padding-left: 41px;
+        }
         @media screen and (max-width: 749px){
             display: none;
         }
@@ -162,9 +206,12 @@
             display: none;
             @media screen and (max-width: 749px){
                 display: block;
-                padding-top: 30px;
+                padding-top: 37px;
             }
             .home__person {
+                padding-top: 0;
+                padding-left: 38%;
+           
                 @media screen and (max-width: 749px){
                     display: block;
                     position: absolute;
@@ -176,8 +223,17 @@
             }
         }
         &-pic {
+            @media screen and (max-width: 749px){
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
             img {
                 max-width: 100%;
+                @media screen and (max-width: 749px){
+                    max-width: 428px;
+                    margin-right: 69px;
+                }
             }
         }
     }
@@ -223,6 +279,18 @@
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                padding: 18px 25px 23px 25px;
+            }
+            @media screen and (max-width: 749px){
+                padding: 17px 14px 18px 16px;
+            }
+            
         }
     }
 }
@@ -275,12 +343,14 @@
         screen and (max-width: 1080px) {
             display: flex;
             align-items: flex-start;
-            margin-top: -50px;
+            margin-top: -57px;
             margin-right: auto;
-            max-width: 625px;
+            max-width: 612px;
+            padding: 44px 12% 42px 60px;
         }
         @media screen and (max-width: 749px){
             display: block;
+            padding: 29px 12% 42px 51px;
         }
         .text--m, 
         .text {
@@ -294,17 +364,30 @@
             margin: 0 auto 28px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                margin: 0 20px 0 0;
+                display: none;
+                margin: 5px 38px 0 0;
             }
             @media screen and (max-width: 749px){
-                margin: 0 auto 28px;
+                margin: 0 0 23px 0;
+                display: block;
+            }
+            &.img-750 {
+                display: none;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    display: block;
+                }
+                @media screen and (max-width: 749px){
+                    display: none;
+                }
             }
         }
     }
     .text-750 {
         font-size: 18px;
         position: relative;
-        padding-left: 20px;
+        padding-left: 16px;
+        margin-top: 11px;
         &:after {
             content: "";
             position: absolute;

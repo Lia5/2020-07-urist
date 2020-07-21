@@ -1,0 +1,91 @@
+.why {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        @media screen and (max-width: 749px){
+            display: block;
+        }
+    }
+    &__item {
+        width: 30%;
+        width: calc(100%/3);
+        margin: 0;
+        padding: 45px;
+        background: #fff;
+        background: url('../img/why-item-bg.png') no-repeat;
+        background-size: 100% 100%;
+        @media screen and (max-width: 749px){
+            width: unset;
+        }
+    }
+    &__item0 {
+        background: none;
+        @media screen and (max-width: 749px){
+            display: none!important;
+        }
+    }
+    &__item01 {
+        order: 2;
+    }
+    &__item5 {
+        order: 3;
+    }
+    &__item2 {
+        order: 4;
+    }
+    &__item02 {
+        order: 5;
+    }
+    &__item6 {
+        order: 6;
+    }
+    &__item3 {
+        order: 7;
+    }
+    &__item03 {
+        order: 8;
+    }
+    &__item7 {
+        order: 9;
+    }
+    &__item04 {
+        order: 10;
+    }
+    &__item4 {
+        order: 11;
+        margin-top: -80px;
+    }
+    &__num {
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.17);
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #5259ef;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%) rotate(45deg);
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+        }
+    }
+    &__text {
+        span {
+            color: #5259ef;
+        }
+    }
+}
