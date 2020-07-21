@@ -485,6 +485,16 @@ ul,li {
 .text--b {
 	font-weight: 700;
 }
+.text-750 {
+	display: none;
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+		display: block;
+	}
+	@media screen and (max-width: 749px){
+		display: none;
+	}
+}
 
 @import "sections/preloader";
 @import "sections/header";
