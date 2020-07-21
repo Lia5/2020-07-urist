@@ -13,7 +13,7 @@
         .one, .two, .three {
             width: 100%;
             height: 3px;
-            background: #222532;
+            background: #fff;
             margin: 4px auto;
             backface-visibility: hidden;
             transition-duration: .3s;
@@ -23,6 +23,7 @@
             .one,
             .three {
                 margin: 8px auto;
+                background: #000;
             }
             .one {
                 transform: rotate(45deg) translate(0,1px);
@@ -52,10 +53,14 @@
                 padding: 31px 30px 36px 53px;
                 // flex-direction: column;
                 align-items: center;
-                margin: 0 15px 0;
+                margin: 0 0 0 15px;
                 text-align: center;
                 color: #090f21;
             } 
+            li {
+                max-width: 215px;
+                margin: 0 auto 10px;
+            }
         }
     }
     .menu-wrap {

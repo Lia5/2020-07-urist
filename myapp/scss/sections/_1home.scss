@@ -59,6 +59,9 @@
                 background-position: left top;
                 z-index: -1;
             }
+            @media screen and (max-width: 749px){
+                content: none;
+            }
         }
     }
     &__title {
@@ -72,9 +75,10 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             font-size: 38px;
+            line-height: 1.2;
         }
         @media screen and (max-width: 749px){
-            text-align: center;
+            font-size: 27px;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
@@ -88,9 +92,10 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             font-size: 38px;
+            line-height: 1.2;
         }
         @media screen and (max-width: 749px){
-
+            font-size: 27px;
         }
 
 
@@ -128,6 +133,9 @@
     &__person {
         position: relative;
         text-align: right;
+        @media screen and (max-width: 749px){
+            display: none;
+        }
         &:after {
             content: "";
             position: absolute;
@@ -137,6 +145,29 @@
             height: 38px;
             background: url('../img/home-dash.png') no-repeat;
             background-size: 100% 100%;
+        }
+        &--mob {
+            position: relative;
+            display: none;
+            @media screen and (max-width: 749px){
+                display: block;
+                padding-top: 30px;
+            }
+            .home__person {
+                @media screen and (max-width: 749px){
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        &-pic {
+            img {
+                max-width: 100%;
+            }
         }
     }
     &__name span {
@@ -199,7 +230,8 @@
         background: #fff;
     }
     @media screen and (max-width: 749px){
-
+        margin: 0;
+        background: transparent;
     }
     @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
@@ -236,6 +268,9 @@
             margin-right: auto;
             max-width: 625px;
         }
+        @media screen and (max-width: 749px){
+            display: block;
+        }
         .text--m, 
         .text {
             @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -249,6 +284,9 @@
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 margin: 0 20px 0 0;
+            }
+            @media screen and (max-width: 749px){
+                margin: 0 auto 28px;
             }
         }
     }
