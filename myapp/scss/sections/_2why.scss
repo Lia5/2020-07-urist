@@ -1,28 +1,40 @@
 .why {
+    background: url('../img/why-bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media screen and (max-width: 749px){
+        background: none;
+        padding-bottom: 30px;
+    }
+    &__title {
+        max-width: 970px;
+        margin: 0 auto 20px;
+        text-align: center;
+        font-size: 43px;
+        line-height: 53px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 274px;
+            height: 259px;
+            background: url('../img/money2.png') no-repeat;
+            background-size: contain;
+        }
+    }
+
     &__items {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        background: url('../img/why-pic.png') no-repeat;
+        background-position: center;
+        background-size: contain;
         @media screen and (max-width: 749px){
             display: block;
-        }
-    }
-    &__item {
-        width: 30%;
-        width: calc(100%/3);
-        margin: 0;
-        padding: 45px;
-        background: #fff;
-        background: url('../img/why-item-bg.png') no-repeat;
-        background-size: 100% 100%;
-        @media screen and (max-width: 749px){
-            width: unset;
-        }
-    }
-    &__item0 {
-        background: none;
-        @media screen and (max-width: 749px){
-            display: none!important;
+            background: none;
         }
     }
     &__item01 {
@@ -56,6 +68,34 @@
         order: 11;
         margin-top: -80px;
     }
+    &__item {
+        width: 30%;
+        width: calc(100%/3);
+        margin: 0;
+        padding: 45px;
+        background: #fff;
+        background: url('../img/why-item-bg.png') no-repeat;
+        background-size: 100% 100%;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            order: unset;
+            width: 50%;
+        }
+        @media screen and (max-width: 749px){
+            width: unset;
+            
+        }
+    }
+    &__item0 {
+        background: none;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            display: none;
+        }
+        @media screen and (max-width: 749px){
+            display: none!important;
+        }
+    }
     &__num {
         font-size: 50px;
         color: rgba(0, 0, 0, 0.17);
@@ -86,6 +126,24 @@
     &__text {
         span {
             color: #5259ef;
+        }
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        button {
+            font-size: 0;
+            border: 0;
+            padding: 0;
+            width: 6px;
+            height: 6px;
+            background: #e8e8e8;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .slick-active button {
+            background: #3f47ed;
         }
     }
 }
