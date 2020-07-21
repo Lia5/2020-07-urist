@@ -1,0 +1,255 @@
+nav {
+    a {
+        color: #fff;
+        @media screen and (max-width: 749px){
+            color: #090f21;
+        }
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+        width: 100%;
+    }
+    a:not(.btn) {
+        color: #fff;
+    }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+    color: #fff;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+        padding-top: 4px;
+
+    }
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+    }
+    .header__callback {
+        color: #45a5ff;
+        text-decoration: underline;
+        line-height: 1;
+        text-align: right;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+
+        }
+        @media screen and (max-width: 749px){
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.header {
+    font-size: 16px;
+    &__phone {
+        font-size: 20px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+    }
+    &__group {
+        // max-width: 255px;
+        @media screen and (max-width: 749px){
+
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+    }
+    &__btn {
+        margin-top: -5px;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+
+    }
+    @media screen and (max-width: 749px){
+
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &__pic {
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+    }
+    &__text {
+        font-size: 16px;
+        max-width: 260px;
+        margin-left: 19px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+
+        }
+        @media screen and (max-width: 749px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.adress {
+    display: flex;
+    align-items: center;
+    max-width: 287px;
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+	screen and (max-width: 1080px) {
+        display: none;
+    }
+    @media only screen and (max-width:  749px){
+        display: block;
+    }
+    &__pic{
+        text-align: center;
+        margin-right: 10px;
+        @media only screen and (max-width:  749px){
+            margin-right: 15px;
+        }
+        span {
+            display: block;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+    }
+    &__text {
+        font-size: 17px;
+        span {
+            letter-spacing: 0.4px;
+        }
+        span:nth-of-type(2) {
+            letter-spacing: -0.52px;
+        }
+        @media only screen and (max-width:  749px){
+            text-align: left;
+        }
+    }
+}
+.main-menu a.example {
+    display: flex;
+    align-items: center;
+    max-width: 287px;
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+	screen and (max-width: 1080px) {
+        display: none;
+    }
+    @media only screen and (max-width:  749px){
+        display: flex;
+        justify-content: flex-end;
+        max-width: none;
+    }
+}
+.bold {
+    font-weight: 500;
+}
+.mob {
+    display: none;
+    @media only screen and (max-width:  749px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 14px;
+        right: -4px;
+    }
+    &-phone {
+        @media only screen and (max-width:  749px){
+            display: flex;
+        }
+    }
+}
+
+.menu-wrap {
+    width: 67%;
+    padding-top: 18px;
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+	screen and (max-width: 1080px) {
+        width: 47%;
+    }
+}
+.menu-toggle {
+    display: none;
+}
+.cross {
+    display: none;
+}
+.main-menu {
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    a  {
+        display: flex;
+    }
+    .support {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @media screen and (max-width: 749px){
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        &__text {
+            font-weight: 700;
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                display: none;
+            }
+            @media only screen and (max-width: 749px) {
+                display: block;
+            }
+        }
+        img {
+            width: 20px;
+            height: 25px;
+            margin-right: 10px;
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                margin-left: 10px;
+            }
+        }
+        &__icon {
+            &--desctop {
+                @media only screen and (max-width: 749px) {
+                    display: none;
+                }
+            }
+            &--mob {
+                display: none;
+                @media only screen and (max-width: 749px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
