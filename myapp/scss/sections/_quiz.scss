@@ -1,17 +1,11 @@
 .quiz {
-    background: url('../img/clouds.jpg');
-    margin-top: -50px;
-    padding-top: 167px;
-    padding-bottom: 20px;
+
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
-        margin-top: -71px;
-        padding-top: 10px;
-        padding-bottom: 92px;
-        background: none;
+
     }
         @media screen and (max-width: 749px){
-            padding-bottom: 147px;
+
         }
     &__wrap {
         display: flex;
@@ -46,7 +40,7 @@
         background: url('../img/q-bg.png');
         background-repeat: no-repeat;
         background-position: left bottom;
-        background-size: 189px;
+        background-size: 100% 100%;
         font-size: 15px;
         line-height: 1.35;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -59,126 +53,45 @@
         @media screen and (max-width: 749px){
             flex-direction: column;
             background-image: none;
-            background: transparent;
         }
         &__wrap {
-            padding: 24px 25px 10px;
-            min-height: 494px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                display: flex;
-                flex-wrap: wrap;
-                width: 70%;
-                min-height: auto;
-                padding: 24px 5% 10px;
+
             }
 
             @media screen and (max-width: 749px){
-                width: 100%;
-                padding-top: 16px;
+
             }
         }
         &__pic {
             position: relative;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                width: 35%;
-                max-width: 250px;
+
             }
             @media screen and (max-width: 749px){
-                order: 1;
-                margin-left: auto;
-                margin-right: auto;
-                width: 92%;
-                max-width: 320px;
+
             }
             img {
                 width: 100%;
             }
         }
-        &__name {
-            position: absolute;
-            bottom: 55px;
-            left: 23px;
-            padding: 10px 20px;
-            font-size: 15px;
-            font-weight: 700;
-            color: #fff;
-            background: #4f4f4f;
-            z-index: 1;
-            border-radius: 5px;
+        &__text {
+            span {
+                background: #fff;
+
+            }
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+
+            }
+            @media screen and (max-width: 749px){
+
+            }
 
         }
-        &__position {
-            position: absolute;
-            bottom: 25px;
-            left: 29px;
-            padding: 10px 16px;
-            font-size: 14px;
-            font-weight: 400;
-            background: #fafaf8;
-            border-radius: 5px;
-        }
-        &__text {
-            margin-bottom: 40px;
-            @media only screen and (max-width: 1350px) and (orientation: portrait),
-            screen and (max-width: 1080px) {
-                width: 100%;
-                order: 1;
-                margin-bottom: 0;
-            }
-            @media screen and (max-width: 749px){
-                margin-top: 22px;
-            }
-            p {
-                margin: 0 0 10px 0;
-            }
-        }
-        &__title {
-            font-size: 16px;
-            line-height: 21px;
-            text-align: center;
-            @media only screen and (max-width: 1350px) and (orientation: portrait),
-            screen and (max-width: 1080px) {
-                width: 50%;
-                text-align: left;
-            }
-        }
-        &__subtitle {
-            font-size: 28px;
-            line-height: 1;
-            text-align: center;
-            margin-bottom: 90px;
-            @media only screen and (max-width: 1350px) and (orientation: portrait),
-            screen and (max-width: 1080px) {
-                width: 50%;
-                margin-bottom: 0;
-            }
-            @media screen and (max-width: 749px){
-                font-size: 23px;
-            }
-        }
-        &__img {
-            @media only screen and (max-width: 1350px) and (orientation: portrait),
-            screen and (max-width: 1080px) {
-                display: flex;
-                img {
-                    margin-top: auto;
-                    @media screen and (max-width: 749px){
-                        display: none;
-                    }
-                    &.quiz-sidebar__img--mob {
-                            
-                        @media screen and (max-width: 749px){
-                            display: block;
-                        }
-                    }
-                }
-            }
-            &--mob {
-                display: none;
-            }
-        }
+
 
     }
     &-qa {
