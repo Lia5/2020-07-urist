@@ -1,4 +1,5 @@
 .why {
+    padding: 104px 0 57px;
     background: url('../img/why-bg.jpg') no-repeat;
     background-position: center;
     background-size: cover;
@@ -6,9 +7,12 @@
         background: none;
         padding-bottom: 30px;
     }
+    .wrap {
+        // padding-right: 67px;
+    }
     &__title {
         max-width: 970px;
-        margin: 0 auto 20px;
+        margin: 0 auto 10px;
         text-align: center;
         font-size: 43px;
         line-height: 53px;
@@ -19,7 +23,7 @@
             content: "";
             position: absolute;
             top: 0;
-            left: -200px;
+            left: -300px;
             width: 274px;
             height: 259px;
             background: url('../img/money2.png') no-repeat;
@@ -30,13 +34,36 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         width: 100%;
+        width: calc(100% + 50px);
         background: url('../img/why-pic.png') no-repeat;
         background-position: center;
         background-size: contain;
+        margin: 0 -15px;
         @media screen and (max-width: 749px){
             display: block;
             background: none;
+        }
+    }
+    &__item {
+        width: 30%;
+        width: calc(100%/3 - 30px);
+        max-width: 357px;
+        margin: 12px 15px;
+        padding: 56px 34px 50px 54px;
+        background: #fff;
+        background: url('../img/why-item-bg.png') no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            order: unset;
+            width: 50%;
+        }
+        @media screen and (max-width: 749px){
+            width: unset;
+            
         }
     }
     &__item01 {
@@ -68,25 +95,7 @@
     }
     &__item4 {
         order: 11;
-        margin-top: -80px;
-    }
-    &__item {
-        width: 30%;
-        width: calc(100%/3);
-        margin: 0;
-        padding: 45px;
-        background: #fff;
-        background: url('../img/why-item-bg.png') no-repeat;
-        background-size: 100% 100%;
-        @media only screen and (max-width: 1350px) and (orientation: portrait),
-        screen and (max-width: 1080px) {
-            order: unset;
-            width: 50%;
-        }
-        @media screen and (max-width: 749px){
-            width: unset;
-            
-        }
+        margin: -115px auto 15px;
     }
     &__item0 {
         background: none;
@@ -99,30 +108,32 @@
         }
     }
     &__num {
+        padding-left: 15px;
         font-size: 50px;
         color: rgba(0, 0, 0, 0.17);
+        margin-bottom: 22px;
         position: relative;
         &:before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 60%;
             transform: translate(0, -50%);
             left: 0;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             background: #5259ef;
         }
         &:after {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 60%;
             transform: translate(0, -50%) rotate(45deg);
-            left: 0;
-            width: 10px;
-            height: 10px;
-            border-bottom: 1px solid #fff;
-            border-right: 1px solid #fff;
+            left: 9px;
+            width: 4px;
+            height: 8px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
         }
     }
     &__text {

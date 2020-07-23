@@ -203,7 +203,7 @@ ul,li {
 	cursor: pointer;
 	background: #fddd6a;
 	background: linear-gradient(45deg, #feeaa3 0%, #fddd6a 50%, #feeaa3 100%);
-	box-shadow: 0px 0px 32px 0px rgba(255,133,113,0.71);
+	box-shadow: 0px 0px 32px 0px rgba(254, 234, 163, 0.714);
 	border: none;
     min-width: 300px;
 	text-align: center;
@@ -231,13 +231,17 @@ ul,li {
 	&:after {
 		content: '';
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 5px;
-		left: 0;
-		z-index: -1;
-		border-radius: 20px;
+		width: 95%;
+		height: 3px;
+		bottom: -3px;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, 0);
+		// z-index: -1;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
 		background: #c0a95f;
+		transition: 0.5s;
 	}
 	.icon {
 		margin-left: 10px;
@@ -246,10 +250,14 @@ ul,li {
 		fill: #000;
 	}
 	&:hover {
-		box-shadow: 0px 7px 18px -6px rgba(255,133,113,1);
+		transform: translateY(3px);
+		&:after {
+			height: 0;
+		}
+		// box-shadow: 0px 7px 18px -6px rgba(255,133,113,1);
 	}
 	&:active {
-		background-image: linear-gradient(to right, #f23723, #ff8571);
+		background-image: linear-gradient(45deg, #feeaa3 0%, #fddd6a 50%, #feeaa3 100%);
 	}
 	&-finish {
 		padding: 0;
@@ -259,15 +267,10 @@ ul,li {
 		}
 		.quiz__btn {
 			display: block;
-			color: #fff;
-			padding: 35px 10px 35px 10px;
-		    text-transform: uppercase;
 			background: transparent;
-			font-size: 15px;
-			font-weight: 700;
 			@media screen and (max-width: 749px){
-				padding-top: 19px;
-				padding-bottom: 25px;
+				// padding-top: 19px;
+				// padding-bottom: 25px;
 			}
 		}
 	}
@@ -331,29 +334,6 @@ ul,li {
 			background-size: 25px 16px;
 			background-position: center;
 			transform: rotate(180deg);
-		}
-	}
-}
-.tooltip {
-	position: relative;
-	&__body-wrap {
-		display: none;
-		padding-left: 20px;
-		position: absolute;
-		top: 0;
-		z-index: 1;
-	}
-	&.active{
-		.tooltip__body-wrap {
-			display: block;
-		}
-	}
-	&:hover {
-		@media only screen and (min-width: 1350px) {
-			.tooltip__body-wrap {
-				display: block;
-			}
-
 		}
 	}
 }
@@ -422,24 +402,24 @@ ul,li {
 }
 @-webkit-keyframes si-button-pulse {
 	from {
-		box-shadow: 0 0 8px 6px #FF8572, 0 0 12px 14px #FF8572; }
+		box-shadow: 0 0 8px 6px #fddd6a, 0 0 12px 14px #fddd6a; }
 	to {
-		box-shadow: 0 0 18px 6px rgba(255,133,113, 0), 0 0 4px 71px rgba(255,133,113, 0); } }
+		box-shadow: 0 0 18px 6px rgba(253, 221, 106, 0), 0 0 4px 71px rgba(253, 221, 106, 0); } }
 @-moz-keyframes si-button-pulse {
 	from {
-		box-shadow: 0 0 8px 6px #FF8572, 0 0 12px 14px #FF8572; }
+		box-shadow: 0 0 8px 6px #fddd6a, 0 0 12px 14px #fddd6a; }
 	to {
-		box-shadow: 0 0 18px 6px rgba(255,133,113, 0), 0 0 4px 71px rgba(255,133,113, 0); } }
+		box-shadow: 0 0 18px 6px rgba(253, 221, 106, 0), 0 0 4px 71px rgba(253, 221, 106, 0); } }
 @-ms-keyframes si-button-pulse {
 	from {
-		box-shadow: 0 0 8px 6px #FF8572, 0 0 12px 14px #FF8572; }
+		box-shadow: 0 0 8px 6px #fddd6a, 0 0 12px 14px #fddd6a; }
 	to {
-		box-shadow: 0 0 18px 6px rgba(255,133,113, 0), 0 0 4px 71px rgba(255,133,113, 0); } }
+		box-shadow: 0 0 18px 6px rgba(253, 221, 106, 0), 0 0 4px 71px rgba(253, 221, 106, 0); } }
 @keyframes si-button-pulse {
 	from {
-		box-shadow: 0 0 8px 6px #FF8572, 0 0 12px 14px #FF8572; }
+		box-shadow: 0 0 8px 6px #fddd6a, 0 0 12px 14px #fddd6a; }
 	to {
-		box-shadow: 0 0 18px 6px rgba(255,133,113, 0), 0 0 4px 71px rgba(255,133,113, 0); } }
+		box-shadow: 0 0 18px 6px rgba(253, 221, 106, 0), 0 0 4px 71px rgba(253, 221, 106, 0); } }
 
 .bubble{
 	position: relative;
