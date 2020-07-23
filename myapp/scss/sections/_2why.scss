@@ -12,12 +12,14 @@
         text-align: center;
         font-size: 43px;
         line-height: 53px;
+    }
+    &__title-pic {
         position: relative;
         &:before {
             content: "";
             position: absolute;
             top: 0;
-            left: 0;
+            left: -200px;
             width: 274px;
             height: 259px;
             background: url('../img/money2.png') no-repeat;

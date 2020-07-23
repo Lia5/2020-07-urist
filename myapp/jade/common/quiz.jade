@@ -1,8 +1,8 @@
 section#quiz.quiz
     .wrap
         .quiz__maintitle 
-            | Ответьте на 4 уточняющих вопросов и 
-            span.text--m Вы получите:
+            span.quiz__maintitle-pic  Ответьте на 4 уточняющих вопросов и 
+                span.text--m Вы получите:
         form(class="quizForm", name="quiz")
             // Hidden Required Fields
             input(type='hidden', name='project_name', value='РаГрад')
@@ -73,7 +73,7 @@ section#quiz.quiz
                                 span Варианты ее решения
                                 span от опытного юриста в 
                                 span консультации по телефону 
-                    .quiz__body
+                    .quiz__body.quiz__body2
                         .step-slide__title Сумма долга?
                         .step-slide__bottom
                             .quiz-progress
