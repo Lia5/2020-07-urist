@@ -140,9 +140,11 @@ $(function() {
                 $(this).closest('.prev-next-container').find('.quiz__error').text('Введите ответ');
             
             } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() != '' ) {
+                $(this).closest('.prev-next-container').find('.quiz__error').text('');
                 $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
             } else {
                 if($(this).closest('.step-slide').find('input:checked').length) {
+                    $(this).closest('.prev-next-container').find('.quiz__error').text('');
                     $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
                     
                 } else {
@@ -179,6 +181,9 @@ $(function() {
           e.preventDefault();
           var btn = $(this);
           var numModal = btn.attr('href');
+        //   if($(this).closest('form').attr("name") == "quiz"){
+        //     var numModal = btn.attr('data-modal');
+        //   }
           if(numModal == '#modalQuiz'){
 
             $('.qa-del-discount').css('display', 'block');
@@ -282,13 +287,13 @@ $(function() {
         form.find('.rfield').addClass('empty_field');
 
         // Функция проверки полей формы
-        if(form.attr("name") == "popup"){
+        // if(form.attr("name") == "popup"){
             if ($('.useful').find('input:checked').length) {
                 $('.useful__input').removeClass('empty_field rfield');
                 $('.useful__label').removeClass('red');
                 console.log('[[[');
             }
-        }
+        // }
         form.find('.rfield').each(function(){
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
@@ -301,12 +306,12 @@ $(function() {
 
                     if (!form.find('.empty_field').length) {
                         if(form.attr("name") == "quiz"){
-                            $('.step-slide--last').removeClass('step-slide--active');
+                            $('.step-slide--choise').removeClass('step-slide--active');
                             $('.step-slide--thank').addClass('step-slide--active');
-                            ym(65723536,'reachGoal','quiz');
+                            // ym(65723536,'reachGoal','quiz');
                         }
                         if(form.attr("name") == "popup"){
-                            ym(65723536,'reachGoal','leave')
+                            // ym(65723536,'reachGoal','leave')
                         }
                         $.ajax({
                             type: "POST",

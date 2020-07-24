@@ -294,12 +294,12 @@
       &:before {
         content: "";
         position: absolute;
-        top: 14px;
+        top: 22px;
         left: 0;
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: #f2d823;
+        background: #a1d154;
 
       }
     }
@@ -317,7 +317,7 @@
   }
   .icon {
     margin-right: 10px;
-    width: 26px;
+    width: 20px;
   }
   
   &__input {
@@ -336,10 +336,15 @@
       align-items: center;
       border: 1px solid #efefef;
       background: #f8f8f8;
-      padding: 28px 38px;
-      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #949494;
+      padding: 20px 30px;
+      margin-right: 12px;
+      margin-bottom: 18px;
+      border-radius: 10px;
       @media screen and (max-width: 749px) {
-        padding: 10px 7px;
+
       }
       &.red {
         border: 1px solid red;
@@ -347,6 +352,15 @@
       &:hover {
         background: transparent;
         border-color: #6f75f1;
+      }
+      &--tg {
+        padding: 20px 27px;
+      }
+      &--email {
+        .icon {
+          width: 15px;
+        }
+        padding: 20px 39px 20px 26px;
       }
   }
   & + .form-line {
@@ -369,6 +383,7 @@
 }
 .form-line {
   display: flex;
+  margin-bottom: 14px;
 }
 .modal__body-pic img {
   max-width: 100%;
