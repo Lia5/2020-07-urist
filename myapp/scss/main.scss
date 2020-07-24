@@ -47,6 +47,8 @@ body {
 		background: #fafafa;
 		border-radius: 7px;
 		padding: 25px 30px;
+		font-family: "Rubik", Arial, Helvetica, sans-serif;
+		font-weight: 300;
 		&:focus:required:invalid {
 			border-color: red;
 		}

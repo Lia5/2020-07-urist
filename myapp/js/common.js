@@ -110,6 +110,16 @@ $(function() {
         
     },500);
 
+
+    $('.useful__label').click(function(){
+        if ($(this).hasClass('useful__label--email')) {
+            $('.form-line--email').addClass('active');
+            $('.form-line--email input').addClass('rfield');
+        } else {
+            $('.form-line--email').removeClass('active');
+            $('.form-line--email input').removeClass('rfield');
+        }
+    });
     //quiz
     if(jQuery('.quiz').length) {
         // input other
@@ -284,16 +294,17 @@ $(function() {
     // form
     $('form').submit(function() { 
         var form = $(this);
-        form.find('.rfield').addClass('empty_field');
+        
 
         // Функция проверки полей формы
         // if(form.attr("name") == "popup"){
-            if ($('.useful').find('input:checked').length) {
-                $('.useful__input').removeClass('empty_field rfield');
-                $('.useful__label').removeClass('red');
+            if (form.find('.useful').find('input:checked').length) {
+                form.find('.useful__input').removeClass('empty_field rfield');
+                form.find('.useful__label').removeClass('red');
                 console.log('[[[');
             }
         // }
+        form.find('.rfield').addClass('empty_field');
         form.find('.rfield').each(function(){
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
@@ -301,7 +312,7 @@ $(function() {
 
                 
                 // && form.find('.useful__input:checked').length
-                if((form.attr("name") == "quiz") || (form.attr("name") == "popup") ) {
+                if((form.attr("name") == "quiz") || (form.attr("name") == "popup") || (form.attr("name") == "callback") ) {
                         
 
                     if (!form.find('.empty_field').length) {
@@ -348,8 +359,8 @@ $(function() {
                         }).done(function(){});
                     } else {
                         console.log('111');
-                        $('.useful__input').addClass('empty_field');
-                        $('.useful__label').addClass('red');
+                        form.find('.useful__input').addClass('empty_field rfield');
+                        form.find('.useful__label').addClass('red');
                     }
 
             } else {

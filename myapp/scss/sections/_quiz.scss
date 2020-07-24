@@ -856,3 +856,19 @@
         margin-bottom: 40px;
     }
 }
+.form-line--email {
+    display: none;
+    &.active {
+        display: flex;
+    }
+}
+.form-line--phone {
+    flex-grow: 1;
+    margin-right: 15px;
+    label {
+        width: 100%;
+    }
+    input {
+        padding: 23px 30px;
+    }
+}
