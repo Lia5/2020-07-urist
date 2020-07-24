@@ -302,6 +302,10 @@ $(function() {
                 form.find('.useful__input').removeClass('empty_field rfield');
                 form.find('.useful__label').removeClass('red');
                 console.log('[[[');
+            } else {
+                console.log('111');
+                form.find('.useful__input').addClass('empty_field rfield');
+                form.find('.useful__label').addClass('red');
             }
         // }
         form.find('.rfield').addClass('empty_field');
@@ -358,9 +362,9 @@ $(function() {
                             data: form.serialize()
                         }).done(function(){});
                     } else {
-                        console.log('111');
-                        form.find('.useful__input').addClass('empty_field rfield');
-                        form.find('.useful__label').addClass('red');
+                        // console.log('111');
+                        // form.find('.useful__input').addClass('empty_field rfield');
+                        // form.find('.useful__label').addClass('red');
                     }
 
             } else {

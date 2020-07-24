@@ -3,6 +3,11 @@
     background: url('../img/why-bg.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+        margin-top: -400px;
+        padding: 392px 0 57px;
+    }
     @media screen and (max-width: 749px){
         background: none;
         padding-bottom: 30px;
@@ -16,6 +21,11 @@
         text-align: center;
         font-size: 43px;
         line-height: 53px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            font-size: 36px;
+            line-height: 45px;
+        }
     }
     &__title-pic {
         position: relative;
