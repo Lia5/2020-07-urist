@@ -10,6 +10,8 @@
     }
     @media screen and (max-width: 749px){
         background: none;
+        margin-top: 0;
+        padding-top: 80px;
         padding-bottom: 30px;
     }
     .wrap {
@@ -27,6 +29,11 @@
             line-height: 45px;
             margin: 0 auto 15px;
         }
+        @media screen and (max-width: 749px){
+            font-size: 27px;
+            line-height: 32px;
+            margin: 0 auto 32px;
+        }
     }
     &__title-pic {
         position: relative;
@@ -39,6 +46,19 @@
             height: 259px;
             background: url('../img/money2.png') no-repeat;
             background-size: contain;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                content: none;
+            }
+        }
+    }
+    &__pic-mob {
+        display: none;
+        @media screen and (max-width: 749px){
+            display: block;
+        }
+        img {
+            max-width: 100%;
         }
     }
 
@@ -55,6 +75,8 @@
         @media screen and (max-width: 749px){
             display: block;
             background: none;
+            margin: -78px auto 0;
+            width: 97%;
         }
     }
     &__item {
@@ -120,7 +142,10 @@
             padding: 58px 34px 37px 42px;
         }
         @media screen and (max-width: 749px){
+            padding: 65px 34px 47px 30px;
             width: unset;
+            margin: 0 auto;
+            display: block!important;
             
         }
     }
@@ -134,6 +159,9 @@
         screen and (max-width: 1080px) {
             padding-left: 10px;
         }
+        @media screen and (max-width: 749px){
+            margin-bottom: 14px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -144,6 +172,9 @@
             height: 24px;
             border-radius: 50%;
             background: #5259ef;
+            @media screen and (max-width: 749px){
+                top: 55%;
+            }
         }
         &:after {
             content: "";
@@ -155,9 +186,15 @@
             height: 8px;
             border-bottom: 2px solid #fff;
             border-right: 2px solid #fff;
+            @media screen and (max-width: 749px){
+                top: 47%;
+            }
         }
     }
     &__text {
+        @media screen and (max-width: 749px){
+            font-size: 16px;
+        }
         span {
             color: #5259ef;
         }
@@ -165,6 +202,7 @@
     .slick-dots {
         display: flex;
         justify-content: center;
+        margin-top: -16px;
         button {
             font-size: 0;
             border: 0;
@@ -178,6 +216,7 @@
         }
         .slick-active button {
             background: #3f47ed;
+            transform: scale(1.5);
         }
     }
 }

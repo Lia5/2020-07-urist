@@ -98,8 +98,8 @@ body {
 	}
 	@media screen and (max-width: 749px){
 		background-size: cover;
-		 background-image: url('../img/main-bg-320.jpg');
-		 background-position-y: -182px;
+		background-image: url('../img/main-bg-320.jpg');
+
 	}
 }
 .policy-body {
@@ -221,7 +221,7 @@ ul,li {
 	@media screen and (max-width: 749px){
 		min-width: auto;
 		display: block;
-		// font-size: 12px;
+		font-size: 17px;
 		// padding-top: 19px;
 		// padding-bottom: 25px;
 	}

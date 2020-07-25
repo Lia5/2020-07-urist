@@ -6,9 +6,9 @@
     screen and (max-width: 1080px) {
         padding: 83px 0;
     }
-        @media screen and (max-width: 749px){
-
-        }
+    @media screen and (max-width: 749px){
+        padding: 43px 0;
+    }
     &__wrap {
         display: flex;
         position: relative;
@@ -46,8 +46,7 @@
             margin-right: auto;
         }
         @media screen and (max-width: 749px){
-            margin-top: 98px;
-            font-size: 23px;
+            font-size: 27px;
             line-height: 32px;
             margin-bottom: 17px;
         }
@@ -90,9 +89,12 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             width: 100%;
+            margin: 0 18px;
+            padding: 40px 0 0 60px;
             order: 1;
             display: flex;
             flex-direction: row;
+            background-image: url('../img/q-bg-750.png');
         }
         @media screen and (max-width: 749px){
             flex-direction: column;
@@ -112,6 +114,10 @@
                     position: relative;
                     top: -50px;
                     margin-bottom: -16px;
+                    @media only screen and (max-width: 1350px) and (orientation: portrait),
+                    screen and (max-width: 1080px) {
+                        margin-bottom: -27px;
+                    }
                 }
                 span:nth-child(1){
                     padding: 2px 24px 4px;
@@ -121,9 +127,17 @@
                 }
             }
             &:nth-child(2){
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    padding-top: 10px;
+                }
                 .quiz-sidebar__text {
                     position: relative;
                     top: 9px;
+                    @media only screen and (max-width: 1350px) and (orientation: portrait),
+                    screen and (max-width: 1080px) {
+                        top: 15px;
+                    }
                 }
                 span:nth-child(1){
                     padding: 2px 19px 0px;
@@ -186,7 +200,7 @@
         margin-bottom: auto;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         @media screen and (max-width: 749px){
             width: 100%;
@@ -225,18 +239,31 @@
 
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            padding-bottom: 73px;
+            padding-bottom: 60px;
         }
     }
     &__body1 {
         .pick-item:nth-child(1){
             width: 42%;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 48%;
+            }
         }
         .pick-item:nth-child(2){
             width: 54%;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                order: 1;
+                width: 60%;
+            }
         }
         .pick-item:nth-child(3){
             width: 42%;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 48%;
+            }
         }
     }
     &__body2 {
@@ -689,10 +716,11 @@
         position: relative;
         padding: 5px 13px 5px 61px;
         background: #f8f8f8;
+        font-weight: 500;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            min-height: 59px;
-            font-size: 15px;
+            min-height: 62px;
+            font-size: 16px;
         }
         &:before {
             content: "";
