@@ -348,6 +348,9 @@
   .btn {
     font-size: 19px;
     min-width: 340px;
+    @media screen and (max-width: 749px) {
+      min-width: 100%;
+    }
   }
   .useful__label {
     padding: 20px 28px;
