@@ -387,14 +387,18 @@
   display: flex;
   flex-wrap: wrap;
   @media screen and (max-width: 749px) {
-      justify-content: flex-start;
+    justify-content: flex-start;
+    margin-left: -6px;
+    margin-right: -6px;
+    width: calc(100% + 12px);
   }
 
-  @media screen and (max-width: 480px){
-
-  }
   &__item {
     flex-grow: 1;
+
+    @media screen and (max-width: 749px){
+      width: 50%;
+    }
   }
   .icon {
     margin-right: 10px;
@@ -425,7 +429,8 @@
       margin-bottom: 18px;
       border-radius: 10px;
       @media screen and (max-width: 749px) {
-
+        margin-right: 6px;
+        margin-left: 6px;
       }
       &.red {
         border: 1px solid red;
@@ -448,6 +453,15 @@
 .form-line {
   display: flex;
   margin-bottom: 14px;
+  label {
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 749px) {
+      width: 100%;
+    }
+  }
 }
 .modal__body-pic img {
   max-width: 100%;

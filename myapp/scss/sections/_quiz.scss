@@ -8,6 +8,7 @@
     }
     @media screen and (max-width: 749px){
         padding: 43px 0;
+        background: none;
     }
     &__wrap {
         display: flex;
@@ -69,6 +70,9 @@
                 height: 231px;
            
             }
+            @media screen and (max-width: 749px){
+                content: none;
+            }
 
         }
     }
@@ -97,8 +101,10 @@
             background-image: url('../img/q-bg-750.png');
         }
         @media screen and (max-width: 749px){
+            padding: 41px 10px 51px 10px;
+            order: 0;
             flex-direction: column;
-            background-image: none;
+            background-image: url('../img/q-bg-320.png');
         }
         &__wrap {
             @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -110,6 +116,12 @@
 
             }
             &:nth-child(1){
+                .quiz-sidebar__pic {
+                    @media screen and (max-width: 749px){
+                        right: 9px;
+                    }
+
+                }
                 .quiz-sidebar__text {
                     position: relative;
                     top: -50px;
@@ -137,6 +149,9 @@
                     @media only screen and (max-width: 1350px) and (orientation: portrait),
                     screen and (max-width: 1080px) {
                         top: 15px;
+                    }
+                    @media screen and (max-width: 749px){
+                        top: 10px;
                     }
                 }
                 span:nth-child(1){
@@ -206,6 +221,7 @@
             width: 100%;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 7px;
         }
         &--text {
             @media screen and (max-width: 749px){
@@ -234,12 +250,14 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             width: 100%;
-            padding: 0 47     px;
         }
 
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             padding-bottom: 60px;
+        }
+        @media screen and (max-width: 749px){
+            padding: 54px 13px 10px 15px;
         }
     }
     &__body1 {
@@ -249,6 +267,9 @@
             screen and (max-width: 1080px) {
                 width: 48%;
             }
+            @media screen and (max-width: 749px){
+                width: 100%;
+            }
         }
         .pick-item:nth-child(2){
             width: 54%;
@@ -257,12 +278,19 @@
                 order: 1;
                 width: 60%;
             }
+            @media screen and (max-width: 749px){
+                width: 100%;
+                order: 0;
+            }
         }
         .pick-item:nth-child(3){
             width: 42%;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 width: 48%;
+            }
+            @media screen and (max-width: 749px){
+                width: 100%;
             }
         }
     }
@@ -273,67 +301,10 @@
         screen and (max-width: 1080px) {
            
         }
-        @media screen and (max-width: 749px){
-            position: relative;
-            background: none;
-            overflow: hidden;
-            &:before {
-                content: "";
-                pointer-events: none;
-                position: absolute;
-                bottom: 0;
-                right: -19vw;
-                width: 376px;
-                height: 391px;
-                background: url('../img/q4.jpg') no-repeat;
-                transform: rotate(-59deg);
-            }
-        }
-        @media screen and (max-width: 493px){
-            &:before {
-                right: auto;
-                left: 51vw;
-            }
-        }
-        @media screen and (max-width: 379px){
-            &:before {
-                right: auto;
-                left: 61vw;
-            }
-        }
     }
     &__body3 {
         background: url('../img/q3-bg.jpg') no-repeat;
         background-position: bottom right;
-        @media screen and (max-width: 880px){
-        }
-        @media screen and (max-width: 549px){
-            position: relative;
-            background: none;
-            overflow: hidden;
-            &:before {
-                content: "";
-                pointer-events: none;
-                position: absolute;
-                bottom: 0;
-                right: -62vw;
-                width: 376px;
-                height: 391px;
-                background: url('../img/q5.jpg') no-repeat;
-                transform: rotate(-27deg);
-            }
-        }
-        @media screen and (max-width: 411px){
-            &:before {
-                left: 71vw;
-                bottom: 58px;
-            }
-        }
-        @media screen and (max-width: 379px){
-            &:before {
-                left: 84vw;
-            }
-        }
         .step-slide__title {
             font-size: 31px;
             letter-spacing: -0.4px;
@@ -344,36 +315,13 @@
         background-position: bottom right;
         @media screen and (max-width: 880px){
         }
-        @media screen and (max-width: 549px){
-            position: relative;
-            background: none;
-            overflow: hidden;
-            &:before {
-                content: "";
-                pointer-events: none;
-                position: absolute;
-                bottom: 0;
-                right: -62vw;
-                width: 376px;
-                height: 391px;
-                background: url('../img/q4-bg.jpg') no-repeat;
-                transform: rotate(-27deg);
-            }
-        }
-        @media screen and (max-width: 411px){
-            &:before {
-                left: 71vw;
-                bottom: 58px;
-            }
-        }
-        @media screen and (max-width: 379px){
-            &:before {
-                left: 84vw;
-            }
-        }
         .step-slide__title {
             font-size: 31px;
             letter-spacing: -0.4px;
+            @media screen and (max-width: 749px){
+                font-size: 27px;
+                line-height: 32px;
+            }
         }
     }
     &-progress {
@@ -387,7 +335,9 @@
 
         }
         @media screen and (max-width: 749px){
-
+            display: block;
+            padding-right: 0;
+            margin-bottom: 22px;
         }
         &__title {
             color: #949494;
@@ -398,7 +348,8 @@
 
             }
             @media screen and (max-width: 749px){
-
+                margin-right: 0;
+                margin-bottom: 7px;
             }
         }
         &__steps {
@@ -502,8 +453,7 @@
             padding-bottom: 0;
         }
         @media screen and (max-width: 749px){
-            padding-top: 73px;
-            background: none;
+            padding-top: 18px;
         }
         &--active {
             display: flex;
@@ -530,8 +480,9 @@
                 min-height: auto;
             }
             @media screen and (max-width: 749px){
+                font-size: 27PX;
                 line-height: 1.3;
-                margin-bottom: 23px;
+                margin-bottom: 15px;
             }
 
         }
@@ -544,8 +495,8 @@
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 background-image: url('../img/th-bg-750.jpg');
-                padding-top: 40px;
-                padding-bottom: 40px;
+                padding-top: 0;
+                padding-bottom: 0;
                 background-size: cover;
                 // background-position: left -30px center;
             }
@@ -565,16 +516,20 @@
             .modalLeave__subtitle {
                 margin-left: 15px;
             }
+            .modalLeave__list li:before {
+                top: 18px;
+            }
             .quiz__thank {
                 width: 42%;
                 padding-bottom: 125px;
 
                 @media only screen and (max-width: 1350px) and (orientation: landscape) {
-                    width: 93%;
+                    // width: 93%;
+                    // order: 1;
                 }
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    width: 76%;
+                    width: 100%;
                 }
                 @media screen and (max-width: 749px){
                     width: 100%;
@@ -585,6 +540,15 @@
                 background: url('../img/present-bg.png') no-repeat;
                 background-size: 100%;
                 background-position: bottom -91px right -20px;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    height: 455px;
+                    background-size: 450px;
+                    background-position: center;
+                }
+                @media screen and (max-width: 749px) {
+                  height: 318px;
+                }              
                 
             }
             
@@ -593,11 +557,20 @@
                 line-height: 53px;
                 font-weight: 500;
                 margin-bottom: 14px;
-                @media only screen and (max-width: 1350px) and (orientation: landscape) {
-                    // margin-bottom: 30px;
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    font-size: 40px;
+                    line-height: 48px;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: 300;
+                    margin-bottom: 20px;
                 }
                 @media screen and (max-width: 749px){
-                    // font-size: 28px;
+                    font-size: 27px;
+                    line-height: 32px;
+                    text-align: center;
+                    justify-content: center;
                     // min-height: auto;
                 }
             }
@@ -606,10 +579,18 @@
                 font-size: 18px;
                 line-height: 25px;
                 
-                @media only screen and (max-width: 1350px) and (orientation: landscape) {
-
+                @media only screen and (max-width: 1350px) and (orientation: portrait),
+                screen and (max-width: 1080px) {
+                    font-size: 22px;
+                    line-height: 30px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
                 @media screen and (max-width: 749px){
+                    max-width: 400px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
                     // font-size: 15px;
                     // margin-left: 15px;
                 }
@@ -619,6 +600,11 @@
                 @media screen and (max-width: 544px){
                     padding-bottom: 230px;
                 }
+            }
+            .btn {
+                min-width: 330px;
+                font-size: 19px;
+                padding: 25px 25px 27px 25px;
             }
         }
     }
@@ -632,6 +618,7 @@
     @media screen and (max-width: 749px){
         width: 100%;
         margin-right: 0;
+        margin-bottom: 11px;
     }
     // &:nth-child(2n+1):not(.pick-item--text) {
     //     margin-right: 2%;
@@ -721,6 +708,10 @@
         screen and (max-width: 1080px) {
             min-height: 62px;
             font-size: 16px;
+        }
+        @media screen and (max-width: 749px){
+            padding: 16px 13px 16px 59px;
+            min-height: 60px;
         }
         &:before {
             content: "";
@@ -899,11 +890,16 @@
 .form-line--email {
     display: none;
     label {
-        width: 100%;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 749px){
+            width: 100%;
+        }
     }
     &.active {
         display: flex;
-        margin-right: 15px;
     }
 }
 .form-line--phone {
@@ -915,4 +911,15 @@
     input {
         padding: 23px 30px;
     }
+}
+.return-icon {
+    fill: #fff;
+    width: 18px;
+    height: 16px;
+}
+.next-icon {
+    margin-left: 10px;
+}
+.quizForm {
+    width: 100%;
 }

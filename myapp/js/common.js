@@ -323,6 +323,7 @@ $(function() {
                         if(form.attr("name") == "quiz"){
                             $('.step-slide--choise').removeClass('step-slide--active');
                             $('.step-slide--thank').addClass('step-slide--active');
+                            $('.quiz__maintitle').addClass('disabled');
                             // ym(65723536,'reachGoal','quiz');
                         }
                         if(form.attr("name") == "popup"){

@@ -56,9 +56,9 @@ body {
 			border-color: green;
 		}
 		@media only screen and (max-width: 749px) {
-			font-size: 11px;
-			line-height: 15px;
-			padding: 19px 17px 17px;
+			// font-size: 11px;
+			// line-height: 15px;
+			// padding: 19px 17px 17px;
 		}
 	}
 	input.empty_field {
@@ -283,7 +283,9 @@ ul,li {
 		}
 	}
 	&-next {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		min-width: 147px;
 		padding: 25px 30px;
 		box-shadow: none;
@@ -292,10 +294,9 @@ ul,li {
 
 		}
 		@media screen and (max-width: 749px){
-			min-width: 130px;
-			padding: 15px 23px;
-			// font-size: 20px;
-			// padding: 16px;
+			min-width: 146px;
+			padding: 23px 23px;
+			font-size: 15px;
 		}
 		svg {
 			width: 21px;
@@ -304,21 +305,21 @@ ul,li {
 	}
 	&-prev {
 		display: block;
-		min-width: 205px;
+		min-width: 67px;
 		padding: 25px 30px;
 		margin-right: 21px;
 		position: relative;
-		background: linear-gradient(to right,#d8d8d8,#f3f3f3);
+		background: linear-gradient(to top right,#d8d8d8,#bbbaba 50%, #f3f3f3);
 		box-shadow: none;
 		@media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
 
 		}
 		@media screen and (max-width: 749px){
-			min-width: 130px;
 			padding: 15px 23px;
 			display: flex;
 			align-items: center;
+			margin-right: 10px;
 		}
 		span {
 			position: relative;
