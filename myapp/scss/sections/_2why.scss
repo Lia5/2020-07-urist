@@ -6,7 +6,7 @@
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
         margin-top: -400px;
-        padding: 392px 0 57px;
+        padding: 392px 0 75px;
     }
     @media screen and (max-width: 749px){
         background: none;
@@ -23,8 +23,9 @@
         line-height: 53px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            font-size: 36px;
+            font-size: 38px;
             line-height: 45px;
+            margin: 0 auto 15px;
         }
     }
     &__title-pic {
@@ -66,15 +67,6 @@
         background: url('../img/why-item-bg.png') no-repeat;
         background-size: 100% 100%;
         background-position: center center;
-        @media only screen and (max-width: 1350px) and (orientation: portrait),
-        screen and (max-width: 1080px) {
-            order: unset;
-            width: 50%;
-        }
-        @media screen and (max-width: 749px){
-            width: unset;
-            
-        }
     }
     &__item01 {
         order: 2;
@@ -117,12 +109,31 @@
             display: none!important;
         }
     }
+
+    &__item {
+
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            order: unset;
+            width: calc(50% - 30px);
+            margin: 12px 15px;
+            padding: 58px 34px 37px 42px;
+        }
+        @media screen and (max-width: 749px){
+            width: unset;
+            
+        }
+    }
     &__num {
         padding-left: 15px;
         font-size: 50px;
         color: rgba(0, 0, 0, 0.17);
         margin-bottom: 22px;
         position: relative;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            padding-left: 10px;
+        }
         &:before {
             content: "";
             position: absolute;

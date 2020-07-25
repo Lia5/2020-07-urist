@@ -4,7 +4,7 @@
     background-position: center right;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
-
+        padding: 83px 0;
     }
         @media screen and (max-width: 749px){
 
@@ -40,7 +40,10 @@
         margin-bottom: 23px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            font-size: 34px;
+            font-size: 38px;
+            line-height: 47px;
+            margin-left: auto;
+            margin-right: auto;
         }
         @media screen and (max-width: 749px){
             margin-top: 98px;
@@ -60,6 +63,13 @@
             height: 277px;
             background: url('../img/stamp.png') no-repeat;
             background-size: contain;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                left: -143px;
+                width: 137px;
+                height: 231px;
+           
+            }
 
         }
     }
@@ -210,7 +220,7 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             width: 100%;
-            padding: 0 17px;
+            padding: 0 47     px;
         }
 
         @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -488,7 +498,9 @@
             align-items: flex-end;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                margin-bottom: 26px;
+                font-size: 25px;
+                margin-bottom: 17px;
+                min-height: auto;
             }
             @media screen and (max-width: 749px){
                 line-height: 1.3;
@@ -696,12 +708,12 @@
             left: 24px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                width: 37px;
-                height: 37px;
+                // width: 37px;
+                // height: 37px;
             }
             @media screen and (max-width: 749px){
-                width: 34px;
-                height: 34px;
+                // width: 34px;
+                // height: 34px;
             }
         }
     }
@@ -858,8 +870,12 @@
 }
 .form-line--email {
     display: none;
+    label {
+        width: 100%;
+    }
     &.active {
         display: flex;
+        margin-right: 15px;
     }
 }
 .form-line--phone {

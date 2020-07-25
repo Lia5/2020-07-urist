@@ -19,7 +19,7 @@
       margin: auto;
       @media only screen and (max-width: 749px) {
       //     max-width: 100%;
-          width: 95%;
+          // width: 95%;
           padding-right: 1%;
       }   
   }
@@ -230,45 +230,87 @@
   padding-top: 50px;
 }
 .modal__part {
-  width: 50%;
+  width: 53%;
   padding: 52px 0 42px 110px;
+  @media only screen and (max-width: 1350px) and (orientation: portrait),
+  screen and (max-width: 1080px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 749px) {
+    padding-top: 0;
+    margin-top: -17px;
+  }
 }
 .modal__img {
-  width: 50%;
-  background: url('../img/present-bg.png') no-repeat;
-  background-size: 132%;
-  background-position: bottom -162px right -144px;
+  position: relative;
+  width: 47%;
+  @media only screen and (max-width: 1350px) and (orientation: portrait),
+  screen and (max-width: 1080px) {
+    width: 100%;
+    height: 495px;
+  }
+  @media screen and (max-width: 749px) {
+    height: 318px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/present-bg.png') no-repeat;
+    background-size: 782px;
+    background-position: top 72px left -43px;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      background-size: 497px;
+      background-position: top 58px center;
+    }
+    @media screen and (max-width: 749px) {
+      background-size: 323px;
+      background-position: top 31px center;
+    }
+  }
+
+  
 }
 .modalLeave {
+  .modal__wrap {
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      max-width: 630px;
+    }
+    
+  }
   .modal__body {
     display: flex;
     padding: 0;
     background: url('../img/bg-leave.png') no-repeat;
     background-size: 107% 110%;
     background-position: center;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      flex-wrap: wrap;
+      background-image: url('../img/bg-leave-750.png');
+      background-size: 100% 100%;
+      padding: 5% 6% 5% 6%;
+    }
     @media screen and (max-width: 749px) {
-      background-image: url('../img/bg-320.jpg');
-      background-position: bottom center;
-      background-size: 100% 187px;
-      padding-bottom: 190px;
-      border-radius: 0;
-      padding-left: 15px;
-      padding-right: 15px;
+      background-image: url('../img/bg-leave-320.png');
+      padding: 5% 4% 5% 4%;
     }
   }
   .modal__part {
-    padding: 49px 20px 20px 37px;
+    padding: 49px 47px 20px 6%;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      padding: 49px 6% 20px 6%;
+    }
+    @media screen and (max-width: 749px) {
+      padding: 23px 0% 20px 0%;
+    }
   }
-  .modal-img {
-    background-position: bottom -147px right -134px;
-  }
-  .modalLeave__title {
-    margin-bottom: 28px;
-    letter-spacing: 0.5px;
-  }
-  .modalLeave__subtitle {
-    margin-left: 5px;
-  }
+
+
   .close {
     @media screen and (max-width: 749px) {
       top: 0;
@@ -278,23 +320,30 @@
   &__title {
     font-size: 26px;
     line-height: 37px;
-    margin-bottom: 33px;
     max-width: 513px;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
     @media screen and (max-width: 749px) {
-      font-size: 31px;
-      line-height: 37px;
-      padding-left: 14px;
+      font-size: 24px;
+      line-height: 31px;
+      padding-left: 0;
+      margin-bottom: 14px;
     }
   }
   &__subtitle {
     color: #898989;
     font-size: 19px;
     line-height: 26px;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: 28px;
   }
   .form-line-btn {
     margin-top: 50px;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      margin-top: 30px;
+      margin-bottom: 45px;
+    }
   }
   .btn {
     font-size: 19px;
@@ -391,23 +440,6 @@
         }
         padding: 20px 39px 20px 26px;
       }
-  }
-  & + .form-line {
-    @media screen and (max-width: 749px) {
-      display: block;
-    }
-    .form-line-btn {
-      @media screen and (max-width: 749px) {
-        margin-top: 20px;
-        .btn {
-          width: 100%;
-        }
-        .quiz__btn {
-          padding: 39px 19px;
-        }
-      }
-      
-    }
   }
 }
 .form-line {
