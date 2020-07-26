@@ -72,6 +72,9 @@
         background-position: center;
         background-size: contain;
         margin: 0 -15px;
+    	@media screen and (max-width: 1239px){
+            width: calc(100% + 30px);
+        }
         @media screen and (max-width: 749px){
             display: block;
             background: none;
