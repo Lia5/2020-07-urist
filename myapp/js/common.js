@@ -84,11 +84,11 @@ $(function() {
     //animation
     setTimeout(function(){  
             
-        var introLetter = $(".promo-home__title").find('.animated');
-        introLetter.each(function(i,t) {
-            var $this = $(t);
-            setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
-        });
+        // var introLetter = $(".home__subtitle").find('.animated');
+        // introLetter.each(function(i,t) {
+        //     var $this = $(t);
+        //     setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
+        // });
         
         var introLetter = $(".animated-parent").find('.animated');
         introLetter.each(function(i,t) {
@@ -96,13 +96,13 @@ $(function() {
             setTimeout(function(){ $this.addClass('fadeIn'); },i*20);
         });
 
-        var IntroLinks = $(".promo-home__links").find('.animated');
+        var IntroLinks = $(".home__group").find('.animated');
         IntroLinks.each(function(i,t) {
             var $this = $(t);
             setTimeout(function(){ $this.addClass('fadeInUp'); },i*200);
         });
 
-        var IntroLinks = $(".home__text.animated");
+        var IntroLinks = $(".advantages__item.animated");
         IntroLinks.each(function(i,t) {
             var $this = $(t);
             setTimeout(function(){ $this.addClass('fadeInUp'); },i*200);
@@ -299,14 +299,10 @@ $(function() {
         // Функция проверки полей формы
         // if(form.attr("name") == "popup"){
             if (form.find('.useful').find('input:checked').length) {
-                form.find('.useful__input').removeClass('empty_field rfield');
+                form.find('.useful__input').removeClass('empty_field');
                 form.find('.useful__label').removeClass('red');
                 console.log('[[[');
-            } else {
-                console.log('111');
-                form.find('.useful__input').addClass('empty_field rfield');
-                form.find('.useful__label').addClass('red');
-            }
+            
         // }
         form.find('.rfield').addClass('empty_field');
         form.find('.rfield').each(function(){
@@ -317,18 +313,21 @@ $(function() {
                 
                 // && form.find('.useful__input:checked').length
                 if((form.attr("name") == "quiz") || (form.attr("name") == "popup") || (form.attr("name") == "callback") ) {
-                        
+                        console.log('2[[[');
 
                     if (!form.find('.empty_field').length) {
                         if(form.attr("name") == "popup"){
                             // ym(65723536,'reachGoal','leave')
                         }
+                        console.log('3[[[');
                         $.ajax({
                             type: "POST",
-                            url: "../mail.php", //Change
+                            url: "/dolg/mail.php", //Change
                             data: form.serialize()
                         }).done(function() {
+                            console.log('4[[[');
                             if(form.attr("name") == "quiz"){
+                            console.log('5[[[');
                                 $('.step-slide--choise').removeClass('step-slide--active');
                                 $('.step-slide--thank').addClass('step-slide--active');
                                 $('.quiz__maintitle').addClass('disabled');
@@ -355,7 +354,7 @@ $(function() {
                         });
                         $.ajax({
                             method: "POST",
-                            url: "../telegram.php", //Change
+                            url: "/dolg/telegram.php", //Change
                             data: form.serialize()
                         }).done(function(){});
                     } else {
@@ -368,6 +367,13 @@ $(function() {
             }
             } else {}
         });
+    
+    } else {
+        console.log('111');
+        form.find('.useful__input').addClass('empty_field');
+        form.find('.useful__label').addClass('red');
+    }
+
 		return false;
     });
 

@@ -1,13 +1,13 @@
 .quiz {
-    padding: 111px 0;
+    padding: 111px 0 39px;
     background: url('../img/q-bg.jpg') no-repeat;
     background-position: center right;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
-        padding: 83px 0;
+        padding: 83px 0 60px;
     }
     @media screen and (max-width: 749px){
-        padding: 43px 0;
+        padding: 43px 0 168px;
         background: none;
     }
     &__wrap {
@@ -480,7 +480,7 @@
                 min-height: auto;
             }
             @media screen and (max-width: 749px){
-                font-size: 27PX;
+                font-size: 27px;
                 line-height: 1.3;
                 margin-bottom: 15px;
             }
@@ -556,6 +556,7 @@
                 @media screen and (max-width: 749px){
                     width: 100%;
                     margin-top: -26px;
+                    padding-bottom: 0;
                 }
             }
             .quiz__thank-img {
@@ -620,12 +621,6 @@
                     text-align: center;
                     // font-size: 15px;
                     // margin-left: 15px;
-                }
-            }
-            .quiz__wrap {
-                
-                @media screen and (max-width: 544px){
-                    padding-bottom: 230px;
                 }
             }
             .btn {

@@ -238,15 +238,17 @@
         &-pic {
             @media screen and (max-width: 749px){
                 text-align: center;
-                display: flex;
-                justify-content: center;
+                // display: flex;
+                // justify-content: center;
                 overflow: hidden;
+                max-width: 428px;
             }
             img {
                 max-width: 100%;
                 @media screen and (max-width: 749px){
-                    max-width: 428px;
-                    margin-right: 69px;
+                    width: 428px;
+                    max-width: none;
+                    transform: translateX(-100px);
                 }
             }
         }
