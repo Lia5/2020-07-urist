@@ -320,20 +320,20 @@ $(function() {
                         
 
                     if (!form.find('.empty_field').length) {
-                        if(form.attr("name") == "quiz"){
-                            $('.step-slide--choise').removeClass('step-slide--active');
-                            $('.step-slide--thank').addClass('step-slide--active');
-                            $('.quiz__maintitle').addClass('disabled');
-                            // ym(65723536,'reachGoal','quiz');
-                        }
                         if(form.attr("name") == "popup"){
                             // ym(65723536,'reachGoal','leave')
                         }
                         $.ajax({
                             type: "POST",
-                            url: "/mail.php", //Change
+                            url: "../mail.php", //Change
                             data: form.serialize()
                         }).done(function() {
+                            if(form.attr("name") == "quiz"){
+                                $('.step-slide--choise').removeClass('step-slide--active');
+                                $('.step-slide--thank').addClass('step-slide--active');
+                                $('.quiz__maintitle').addClass('disabled');
+                                // ym(65723536,'reachGoal','quiz');
+                            }
                             var numModal = form.find('.btn-finish').attr('data-modal');
                             var modal =  $(numModal);
                             var modalWrap = $('.modal__wrap');
@@ -353,13 +353,9 @@ $(function() {
                                 // form.trigger("reset");
                             }, 1000);
                         });
-                        console.log('123333');
-
-                        
-
                         $.ajax({
                             method: "POST",
-                            url: "/telegram.php", //Change
+                            url: "../telegram.php", //Change
                             data: form.serialize()
                         }).done(function(){});
                     } else {
