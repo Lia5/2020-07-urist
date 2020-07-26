@@ -502,8 +502,8 @@
             }
             @media screen and (max-width: 749px){
                 background-image: url('../img/th-bg-320.jpg');
-                padding-left: 15px;
-                padding-right: 15px;
+                padding-left: 13px;
+                padding-right: 13px;
             }
             .quiz__wrap {
                 background: none;
@@ -515,9 +515,30 @@
             }
             .modalLeave__subtitle {
                 margin-left: 15px;
+                @media screen and (max-width: 749px){
+                    margin-left: 27px;
+                    margin-bottom: 4px;
+                }
             }
-            .modalLeave__list li:before {
-                top: 18px;
+            .modalLeave__list {
+                
+                @media screen and (max-width: 749px){
+                    margin-bottom: 26px;
+                }
+            }
+            .modalLeave__list li {
+                @media screen and (max-width: 749px){
+                    font-size: 18px;
+                    padding-left: 29px;
+                    padding-bottom: 7px;
+                }
+                &:before {
+                    top: 18px;
+                    @media screen and (max-width: 749px){
+                        top: 21px;
+                        left: 10px;
+                    }
+                }
             }
             .quiz__thank {
                 width: 42%;
@@ -530,9 +551,11 @@
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
                     width: 100%;
+                    order: 1;
                 }
                 @media screen and (max-width: 749px){
                     width: 100%;
+                    margin-top: -26px;
                 }
             }
             .quiz__thank-img {
@@ -542,12 +565,15 @@
                 background-position: bottom -91px right -20px;
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
+                    width: 100%;
                     height: 455px;
                     background-size: 450px;
                     background-position: center;
+
                 }
                 @media screen and (max-width: 749px) {
                   height: 318px;
+                  background-size: 100%;
                 }              
                 
             }
@@ -571,7 +597,8 @@
                     line-height: 32px;
                     text-align: center;
                     justify-content: center;
-                    // min-height: auto;
+                    margin-bottom: 16px;
+                    font-weight: 500;
                 }
             }
             p {
@@ -589,7 +616,7 @@
                 @media screen and (max-width: 749px){
                     max-width: 400px;
                     font-size: 20px;
-                    line-height: 30px;
+                    line-height: 31px;
                     text-align: center;
                     // font-size: 15px;
                     // margin-left: 15px;
@@ -605,6 +632,9 @@
                 min-width: 330px;
                 font-size: 19px;
                 padding: 25px 25px 27px 25px;
+                @media screen and (max-width: 749px){
+                    min-width: 100%;
+                }
             }
         }
     }
