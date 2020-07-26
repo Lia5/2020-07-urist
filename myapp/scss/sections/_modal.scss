@@ -141,7 +141,7 @@
 #modalFinish {
   .modal{
     &__wrap {
-      max-width: 420px;
+      max-width: 509px;
       text-align: center;
       @media only screen and (max-width: 749px) {
         //     max-width: 100%;
@@ -150,39 +150,71 @@
       }
     }
     &__body {
-      
-      padding: 0;
+      padding: 56px 10px 0;
       background:  url('../img/callback-th.png') no-repeat;
       background-size: 100% 100%;
       background-position: center;
       @media only screen and (max-width: 749px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 73px;
+        background-image:  url('../img/callback-th-320.png')
       }
     }
     &__title {
       font-size: 30px;
       line-height: 53px;
-      font-weight: 700;
+      font-weight: 500;
       color: #fff;
       @media only screen and (max-width: 749px) {
-
+        font-size: 27px;
       }
     }
     &__subtitle {
       font-size: 20px;
       line-height: 28px;
       color: #fff;
+    }
+    &__pic {
+      margin-top: 31px;
+      max-height: 400px;
+      overflow: hidden;
       @media only screen and (max-width: 749px) {
-
+        margin-top: 12px;
+      }
+      img {
+        transform: translateX(-24px);
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+          transform: translateX(-108px);
+        }
+        @media only screen and (max-width: 749px) {
+          transform: translateX(4px);
+        }
       }
     }
   }
   .home__person {
     position: absolute;
-    top: 60%;
-    left: 5%;
+    top: 71%;
+    left: 16%;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+      top: 58%;
+      left: auto;
+      right: 10%;
+    }
+    @media only screen and (max-width: 749px) {
+      display: block;
+      right: auto;
+      padding-left: 0;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 0);
+    }
+    &:after {
+      content: none;
+    }
+  }
+  .home__position span {
+      margin-right: 5px;
   }
   // .close {
   //   top: -9px;
