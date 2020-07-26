@@ -5,7 +5,11 @@ doctypehtml
 html(lang='ru')
 	include ../common/head
 	body
-
+		nav.fixed-nav
+			ul
+				li(data-menuanchor='#home') 01
+				li(data-menuanchor='#why') 02
+				li(data-menuanchor='#quiz') 03
 		.main
 			include ../common/header
 			include ../common/1home

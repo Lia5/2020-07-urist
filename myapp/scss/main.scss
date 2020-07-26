@@ -529,3 +529,63 @@ ul,li {
 .animated.zoomIn {
 	opacity: 1;
 }
+.fixed-nav {
+    position: fixed;
+    top: 58%;
+    left: 5px;
+    transform: translateY(-50%);
+	z-index: 2;
+
+	@media screen and (min-width: 1444px){
+		left: 1vw;
+	}
+	@media screen and (min-width: 1541px){
+		left: 3vw;
+	}
+	@media screen and (min-width: 1660px){
+		left: 5vw;
+	}
+	@media screen and (min-width: 1800px){
+		left: 6vw;
+	}
+	@media screen and (max-width: 1380px){
+		display: none;
+	}
+	li {
+		font-size: 25px;
+		cursor: pointer;
+		color: #5a5a5a;
+		margin-bottom: 38px;
+		padding-left: 48px;
+		position: relative;
+		transition: all .5s ease;
+		&:after {
+			content: "";
+			width: 26px;
+			height: 1px;
+			background-color: transparent;
+			position: absolute;
+			top: 52%;
+			left: 0;
+			transition: all .5s ease;
+		}
+		&.active, &:hover {
+			color: #464eee;
+			padding-left: 56px;
+			&:after, &:after {
+				width: 38px;
+				background-color: #464eee;
+			}
+		}
+		&.active1 {
+			color: #fff;
+			padding-left: 56px;
+			&:after, &:after {
+				width: 38px;
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+
