@@ -299,12 +299,22 @@
         background-position: bottom 64px right 96px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-           
+            background-position: bottom 25px right 96px;
+        }
+        @media screen and (max-width: 749px){
+            background: none;
         }
     }
     &__body3 {
         background: url('../img/q3-bg.jpg') no-repeat;
         background-position: bottom right;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            background-size: 380px;
+        }
+        @media screen and (max-width: 749px){
+            background: none;
+        }
         .step-slide__title {
             font-size: 31px;
             letter-spacing: -0.4px;
@@ -313,7 +323,13 @@
     &__body4 {
         background: url('../img/q4-bg.jpg') no-repeat;
         background-position: bottom right;
-        @media screen and (max-width: 880px){
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            background-size: 280px;
+            background-position: bottom right 58px;
+        }
+        @media screen and (max-width: 749px){
+            background: none;
         }
         .step-slide__title {
             font-size: 31px;
