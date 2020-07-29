@@ -128,7 +128,7 @@
             position: absolute;
             top: -5px;
             left: -15px;
-            width: 100%;
+            width: 105%;
             height: 100%;
             border: 1px solid #414149;
             z-index: -1;
@@ -260,6 +260,7 @@
         font-weight: 500;
         color: #fff;
         background: #4a52ee;
+        border-radius: 5px;
     }
     &__position span {
         display: inline-block;
@@ -268,6 +269,7 @@
         background: #fff;
         color: #000;
         margin-right: 11px;
+        border-radius: 5px;
     }
     &__group {
         @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -298,6 +300,7 @@
         }
         .btn {
             // display: flex;
+            display: block;
             align-items: center;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
@@ -307,6 +310,9 @@
                 padding: 17px 14px 18px 16px;
             }
             
+        }
+        .si-button-puls {
+            display: inline-block;
         }
     }
 }

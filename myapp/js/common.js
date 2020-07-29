@@ -153,16 +153,35 @@ $(function() {
         
     },500);
 
+    if(jQuery('.useful').length) {
+        $('.useful__input').click(function(){
+           
+            if ($(this).val() == 'Telegram') {
+                $(this).closest('.useful').find('.input-tg').addClass('rfield active');
+                $(this).closest('.useful').find('.input-tel').removeClass('active rfield');
+            } else {
+                $(this).closest('.useful').find('.input-tg').removeClass('rfield active');
+                $(this).closest('.useful').find('.input-tel').addClass('active rfield');
+                if ($(this).val() == 'WhatsApp') {
+                    $(this).closest('.useful').find('.input-tel').attr('placeholder', 'Введите номер WhatsApp').addClass('phone-mask');
+                } else if ($(this).val() == 'Viber') {
+                    $(this).closest('.useful').find('.input-tel').attr('placeholder', 'Введите номер Viber').addClass('phone-mask');
+                } else  {
+                    $(this).closest('.useful').find('.input-tel').attr('placeholder', 'Введите номер').addClass('phone-mask');
+                }
+            }
+        });
+    }
 
-    $('.useful__label').click(function(){
-        if ($(this).hasClass('useful__label--email')) {
-            $('.form-line--email').addClass('active');
-            $('.form-line--email input').addClass('rfield');
-        } else {
-            $('.form-line--email').removeClass('active');
-            $('.form-line--email input').removeClass('rfield');
-        }
-    });
+    // $('.useful__label').click(function(){
+    //     if ($(this).hasClass('useful__label--email')) {
+    //         $('.form-line--email').addClass('active');
+    //         $('.form-line--email input').addClass('rfield');
+    //     } else {
+    //         $('.form-line--email').removeClass('active');
+    //         $('.form-line--email input').removeClass('rfield');
+    //     }
+    // });
     //quiz
     if(jQuery('.quiz').length) {
         // input other

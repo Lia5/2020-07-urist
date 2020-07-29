@@ -589,3 +589,244 @@ ul,li {
 }
 
 
+.input-tel,
+.input-tg {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+.mob_phone .svg-call {
+    width: 23px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.mob_phone {
+	position: relative;
+}
+.mob_phone  .cls-1 {
+    fill: #6d6a6a
+}
+
+.svg-call {
+    overflow: visible;
+    width: 32px
+}
+
+.svg-call .svg-phone {
+    -webkit-animation: call 1s infinite;
+    animation: call 1s infinite;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center
+}
+
+@-webkit-keyframes call {
+    0% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+}
+
+@keyframes call {
+    0% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+}
+
+.phone-line-1,.phone-line-2,.phone-line-3,.phone-line-4 {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0
+}
+
+.phone-line-1 {
+    -webkit-animation-name: fade1;
+    animation-name: fade1
+}
+
+.phone-line-2 {
+    -webkit-animation-name: fade2;
+    animation-name: fade2
+}
+
+.phone-line-3 {
+    -webkit-animation-name: fade3;
+    animation-name: fade3
+}
+
+.phone-line-4 {
+    -webkit-animation-name: fade4;
+    animation-name: fade4
+}
+
+@-webkit-keyframes fade1 {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    25% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fade2 {
+    20% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 1
+    }
+
+    65% {
+        opacity: 0
+    }
+}
+
+@keyframes fade2 {
+    20% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    45% {
+        opacity: 1
+    }
+
+    65% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fade3 {
+    40% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    65% {
+        opacity: 1
+    }
+
+    85% {
+        opacity: 0
+    }
+}
+
+@keyframes fade3 {
+    40% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    65% {
+        opacity: 1
+    }
+
+    85% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fade4 {
+    60% {
+        opacity: 0
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    85% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fade4 {
+    60% {
+        opacity: 0
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    85% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
