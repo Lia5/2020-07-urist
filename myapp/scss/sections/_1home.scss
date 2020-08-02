@@ -288,7 +288,7 @@
         display: none;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            display: block;
+            display: inline-block;
         }
         @media screen and (max-width: 749px){
             margin-left: auto;

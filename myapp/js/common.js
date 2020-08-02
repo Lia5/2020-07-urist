@@ -375,13 +375,82 @@ $(function() {
                 
                 // && form.find('.useful__input:checked').length
                 if((form.attr("name") == "quiz") || (form.attr("name") == "popup") || (form.attr("name") == "callback") ) {
-                        console.log('2[[[');
+
 
                     if (!form.find('.empty_field').length) {
-                        if(form.attr("name") == "popup"){
-                            // ym(65723536,'reachGoal','leave')
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp1"){
+                            ym(66066730,'reachGoal','quiz');
                         }
-                        console.log('3[[[');
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp1"){
+                            ym(66066730,'reachGoal','callback');
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp2"){
+                            ym(66072997,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp2"){
+                            ym(66072997,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp3"){
+                            ym(66088414,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp3"){
+                            ym(66088414,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp4"){
+                            ym(66088672,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp4"){
+                            ym(66088672,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp5"){
+                            ym(66088789,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp5"){
+                            ym(66088789,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp6"){
+                            ym(66088981,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp6"){
+                            ym(66088981,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp7"){
+                            ym(66089659,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp7"){
+                            ym(66089659,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp8"){
+                            ym(66093448,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp8"){
+                            ym(66093448,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp9"){
+                            ym(66094606,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp9"){
+                            ym(66094606,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp10"){
+                            ym(66095038,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp10"){
+                            ym(66095038,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp11"){
+                            ym(66095332,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp11"){
+                            ym(66095332,'reachGoal','callback')
+                        }
+                        if(form.attr("name") == "quiz" && form.attr("data-quiz") == "lp12"){
+                            ym(66095614,'reachGoal','quiz')
+                        }
+                        if(form.attr("name") == "callback" && form.attr("data-quiz") == "lp12"){
+                            ym(66095614,'reachGoal','callback')
+                        }
+
                         $.ajax({
                             type: "POST",
                             url: "/dolg/mail.php", //Change
@@ -389,7 +458,6 @@ $(function() {
                         }).done(function() {
                             console.log('4[[[');
                             if(form.attr("name") == "quiz"){
-                            console.log('5[[[');
                                 $('.step-slide--choise').removeClass('step-slide--active');
                                 $('.step-slide--thank').addClass('step-slide--active');
                                 $('.quiz__maintitle').addClass('disabled');
@@ -449,41 +517,41 @@ $(function() {
 });
 
 
-    // функция возвращает cookie с именем name, если есть, если нет, то undefined    
-    function getCookie(name) {
-        var matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
-    // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
-    var alertwin = getCookie("alertwin");
-    console.log(alertwin);
-    if (alertwin != "no") { 
-        $(document).on('mouseleave', function() {
-            $('.modalLeave').removeClass('disabled');
-            var modalWrap = $('.modalLeave .modal__wrap');
-            modalWrap.removeClass('fadeOutUp');
-            modalWrap.addClass('fadeInDown');
-            // записываем cookie на 1 день, с которой мы не показываем окно
-            var date = new Date;
-            date.setDate(date.getDate() + 1);    
-            document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
+    // // функция возвращает cookie с именем name, если есть, если нет, то undefined    
+    // function getCookie(name) {
+    //     var matches = document.cookie.match(new RegExp(
+    //     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    //     ));
+    //     return matches ? decodeURIComponent(matches[1]) : undefined;
+    // }
+    // // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+    // var alertwin = getCookie("alertwin");
+    // console.log(alertwin);
+    // if (alertwin != "no") { 
+    //     $(document).on('mouseleave', function() {
+    //         $('.modalLeave').removeClass('disabled');
+    //         var modalWrap = $('.modalLeave .modal__wrap');
+    //         modalWrap.removeClass('fadeOutUp');
+    //         modalWrap.addClass('fadeInDown');
+    //         // записываем cookie на 1 день, с которой мы не показываем окно
+    //         var date = new Date;
+    //         date.setDate(date.getDate() + 1);    
+    //         document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
        
-        });
-        $(document).click(function(e) {
-            if (($(".modalLeave").is(':visible')) && (!$(e.target).closest(".modalLeave .modal__body").length)) {
-                var modalWrap = $('.modalLeave .modal__wrap');
-                modalWrap.removeClass('fadeInDown');
-                modalWrap.addClass('fadeOutUp');
-                setTimeout(function() {
-                    $('.modalLeave').addClass('disabled');
-                }, 700);
-                setTimeout(function() {
-                    $('.modalLeave').removeClass('flex');
-                    $('body').removeClass('body-modal-open');
-                    $(".modalLeave").remove();
-              }, 800); 
-            }
-        });
-    } 
+    //     });
+    //     $(document).click(function(e) {
+    //         if (($(".modalLeave").is(':visible')) && (!$(e.target).closest(".modalLeave .modal__body").length)) {
+    //             var modalWrap = $('.modalLeave .modal__wrap');
+    //             modalWrap.removeClass('fadeInDown');
+    //             modalWrap.addClass('fadeOutUp');
+    //             setTimeout(function() {
+    //                 $('.modalLeave').addClass('disabled');
+    //             }, 700);
+    //             setTimeout(function() {
+    //                 $('.modalLeave').removeClass('flex');
+    //                 $('body').removeClass('body-modal-open');
+    //                 $(".modalLeave").remove();
+    //           }, 800); 
+    //         }
+    //     });
+    // } 

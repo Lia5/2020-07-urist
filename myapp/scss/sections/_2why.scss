@@ -223,3 +223,45 @@
         }
     }
 }
+.lp1 {
+    .why {
+
+        &__item01 {
+            order: 2;
+        }
+        &__item4 {
+            order: 3;
+            margin: 0;
+        }
+        &__item2 {
+            order: 4;
+        }
+        &__item02 {
+            order: 5;
+        }
+        &__item5 {
+            order: 6;
+        }
+        &__item3 {
+            order: 7;
+        }
+        &__item03 {
+            order: 8;
+        }
+        &__item6 {
+            order: 9;
+        }
+        &__item04 {
+            display: none;
+        }
+
+        &__item {
+            
+
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                order: unset;
+            }
+        }
+    }
+}
